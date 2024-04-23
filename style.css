@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&Noto+Sans+KR&display=swap");
+
+#wrap {
+  color: black;
+  max-width: 500px;
+  min-height: 800px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: auto;
+  background-image: url('img/bg.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  word-break: keep-all;
+  position: relative;
+}
+
+#desc {
+  min-height: 200px;
+}
+
+#main {
+  display: block;
+  text-align: center;
+}
+
+#progress {
+  background-color: #7148b5;
+}
+
+#number {
+  text-align: end;
+}
+
+#img {
+  width: 70%;
+}
+
+#back {
+  cursor: pointer;
+  text-align: start;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+
+#test {
+  text-align: center;
+  display: none;
+}
+
+#result_img {
+  width: 80%;
+}
+
+#result {
+  display: none;
+  text-align: center;
+}
+
+#warning_message {
+  color: red;
+}
+
+#count {
+  display: none;
+  color: yellow;
+}
+
+#highlight {
+  color: red;
+}
+
+.btn {
+  font-size: 18px;
+}
+
+#share_btn {
+  background-color: #f7e600;
+  color: #3a1d1d;
+}
+
+#score {
+  color: white;
+  font-size: 4.3em;
+}
+
+#s-result {
+  padding: 20px;
+  background-color: white;
+  color: black;
+}
+
+.footer_logo {
+  width: 12%;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url(img/bg.jpg);
+  }
+}
+
+#start_btn, #btnA, #btnB, #btnC, #highscore, #retry_btn {
+  background-color: #7148b5;
+  color: white;
+  font-family: "Jua", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Jua", sans-serif;
+  font-weight: 700;
+}
+
+#result_explain {
+  font-weight: 700;
+}
