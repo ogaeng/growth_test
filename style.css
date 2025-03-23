@@ -1,115 +1,195 @@
-@import url("https://fonts.googleapis.com/css2?family=Jua&Noto+Sans+KR&display=swap");
+/* style.css는 더 이상 필요하지 않습니다. 모든 스타일은 Tailwind CSS로 대체됩니다. */
+/* 애니메이션 등 일부 사용자 정의 스타일만 남겨둡니다. */
 
-#wrap {
-  color: black;
-  max-width: 500px;
-  min-height: 800px;
-  font-family: "Noto Sans KR", sans-serif;
-  margin: auto;
-  background-image: url('img/bg.jpg');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat; 
-  word-break: keep-all;
-  position: relative;
+/* CSS 변수 정의 - 메인 색상 관리 */
+:root {
+    --primary-color: #2F47E7;
+    --primary-color-light: rgba(47, 71, 231, 0.1);
+    --primary-color-shadow: rgba(47, 71, 231, 0.15);
+    --background-color: #E8EBFA; /* 새로운 연한 배경색 변수 추가 */
 }
 
-#desc {
-  min-height: 200px;
+/* Pretendard 폰트 설정 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
-#main {
-  display: block;
-  text-align: center;
+/* 폰트 패밀리 전역 설정 */
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    word-break: keep-all; /* 한글 단어 기준 줄바꿈 */
+    word-wrap: break-word; /* 컨테이너를 넘어가는 단어 줄바꿈 */
+    overflow-wrap: break-word; /* 최신 표준, word-wrap의 대체 속성 */
+    background-color: var(--background-color); /* 기존 --primary-color에서 변경 */
 }
 
+/* 텍스트 요소에 대해서도 적용 */
+p, h1, h2, h3, h4, h5, h6, button, a, span, div {
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* 제목에 대해서도 Pretendard 적용 (Jua 대신) */
+h1, h2, h3, h4, h5, h6, .font-jua {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 700;
+}
+
+/* 버튼에도 Pretendard 적용 */
+button, .btn {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+/* 애니메이션 효과 - Tailwind에서 처리하지 않는 부분 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Tailwind CSS와 함께 사용할 경우 Tailwind 스타일보다 우선 적용되도록 !important 추가 */
+.font-pretendard {
+    font-family: 'Pretendard-Regular', sans-serif !important;
+}
+
+/* 폰트 두께 변형 클래스 */
+.font-pretendard-light {
+    font-family: 'Pretendard-Regular', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.font-pretendard-medium {
+    font-family: 'Pretendard-Regular', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+.font-pretendard-bold {
+    font-family: 'Pretendard-Regular', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* 선택 옵션 스타일 - Tailwind로 대체하기 어려운 부분 */
+.option-text {
+  display: inline-block;
+  line-height: 1.4;
+}
+
+/* 결과 텍스트 스타일링 */
+.prose {
+  max-width: 65ch;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+/* 강조 요소 - 변수 사용 */
+.highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* 결과 페이지 불릿 포인트 스타일링 - 변수 사용 */
+.bullet-point {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.bullet-point-icon {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.bullet-point-text {
+  flex: 1;
+}
+
+/* 선택된 옵션 스타일 - 복잡한 조합 */
+.option-selected {
+  border-color: var(--primary-color) !important;
+  background-color: var(--primary-color-light);
+  box-shadow: 0 4px 12px var(--primary-color-shadow);
+}
+
+/* 호버 트랜지션 효과 */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* 문제 컨테이너 스타일 */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 카드 스타일 개선 */
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* 질문 진행 상태바에 애니메이션 효과 */
 #progress {
-  background-color: #7148b5;
+  transition: width 0.5s ease-in-out;
 }
 
-#number {
-  text-align: end;
+/* 결과 유형 뱃지 스타일 - 변수 사용 */
+.type-badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
-#img {
-  width: 70%;
+/* 문제 상세 설명 텍스트 크기 */
+#desc {
+  font-size: 1.4rem;
 }
 
-#back {
-  cursor: pointer;
-  text-align: start;
-  margin: 0 auto;
-  margin-bottom: 0.5em;
+/* Tailwind 클래스 오버라이드 - 변수 사용 */
+.bg-primary {
+  background-color: var(--primary-color) !important;
 }
 
-#test {
-  text-align: center;
-  display: none;
+.text-primary {
+  color: var(--primary-color) !important;
 }
 
-#result_img {
-  width: 80%;
+.border-primary {
+  border-color: var(--primary-color) !important;
 }
 
-#result {
-  display: none;
-  text-align: center;
+.hover\:border-primary:hover {
+  border-color: var(--primary-color) !important;
 }
 
-#warning_message {
-  color: red;
+.bg-primary\/10 {
+  background-color: var(--primary-color-light) !important;
 }
 
-#count {
-  display: none;
-  color: yellow;
+.hover\:shadow-hover:hover {
+  box-shadow: 0 8px 30px var(--primary-color-shadow) !important;
 }
 
-#highlight {
-  color: red;
-}
-
-.btn {
-  font-size: 18px;
-}
-
-#share_btn {
-  background-color: #f7e600;
-  color: #3a1d1d;
-}
-
-#score {
-  color: white;
-  font-size: 4.3em;
-}
-
-#s-result {
-  padding: 20px;
-  background-color: white;
-  color: black;
-}
-
-.footer_logo {
-  width: 12%;
-}
-
-@media only screen and (max-width: 480px) {
-  body {
-    background-image: url(img/bg.jpg);
-  }
-}
-
-#start_btn, #btnA, #btnB, #btnC, #highscore, #retry_btn {
-  background-color: #7148b5;
-  color: white;
-  font-family: "Jua", sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: "Jua", sans-serif;
-  font-weight: 700;
-}
-
-#result_explain {
-  font-weight: 700;
+/* 그라데이션 배경에도 변수 적용 */
+.bg-gradient-custom {
+  background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--primary-color-shadow) 100%);
 }

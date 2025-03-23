@@ -24,9 +24,12 @@ function answerQuestion(no, anw) {
 }
 
 // 결과 페이지의 이벤트를 위한 데이터영역
-function resultEvent(name, type) {
+function resultEvent(name, type, scoreA, scoreB, scoreC) {
   dataLayer.push({
     event: name,
-    type: type
+    type: type,
+    score_a: scoreA,
+    score_b: scoreB,
+    score_c: scoreC
   });
 }

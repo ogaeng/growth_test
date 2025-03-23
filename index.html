@@ -4,11 +4,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2024 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트</title>
-    <!-- css Import -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>2025 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary-color)',
+                        'primary-light': 'var(--primary-color-light)',
+                        'primary-shadow': 'var(--primary-color-shadow)',
+                        secondary: '#f8f9fa',
+                        dark: '#333333',
+                        light: '#f5f5f7',
+                    },
+                    fontFamily: {
+                        pretendard: ['Pretendard-Regular', 'sans-serif'],
+                        sans: ['Pretendard-Regular', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'hover': '0 8px 30px var(--primary-color-shadow)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,88 +40,156 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MT8M7Q9J');</script>
     <!-- End Google Tag Manager -->
+
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="robots" content="max-image-preview:large">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="2024 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트" />
-    <meta name="twitter:title" content="2024 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트" />
+    <meta property="og:title" content="2025 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트" />
+    <meta name="twitter:title" content="2025 관광기업 데이터 분석환경 구축 및 데이터 마케팅 지원사업 - 유형 테스트" />
     <meta name="description" content="어떤 유형이 우리 회사에 적합한지 테스트를 통해 알아보세요" />
     <meta property="og:description" content="어떤 유형이 우리 회사에 적합한지 테스트를 통해 알아보세요" />
     <meta name="twitter:description" content="어떤 유형이 우리 회사에 적합한지 테스트를 통해 알아보세요" />
     <link rel="canonical" href="https:/growthhacking.kr/">
     <meta property="og:url" content="https://growthhacking.kr/" />
     <meta property="og:image" content="https://growthhacking.kr/img/thumb.jpg" />
-    <meta name="twitter:image:src" content=https://growthhacking.kr/img/thumb.jpg" />
+    <meta name="twitter:image:src" content="https://growthhacking.kr/img/thumb.jpg" />
     <meta property="og:locale" content="ko_KR" />
+    <style>
+        body {
+            background-color: var(--background-color);
+            min-height: 100vh;
+        }
+        
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, var(--primary-color-light) 0%, rgba(232, 235, 250, 0.5) 100%);
+        }
+    </style>
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT8M7Q9J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    height="0" width="0" class="hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- 시작화면 -->
-    <div id="wrap" class="">
-        <div id="main" class="container">
-            <div class="row">
-                <div class="col-12 mt-5">
-                    <!-- <h1 class="mt-5">&#X1F480 <span id="highlight">인류의 95%</span>는 &#X1F480<br>100점을 맞을 수 없는 테스트</h1> -->
-                    <img class="mt-5" src="img/main-title.png" width="90%" alt="">
-                    <h3 class="mt-5">우리 회사에는 어떤 유형이 알맞을지</h3>
-                    <h3 class="mt-2">테스트를 통해 알아보세요.</h3>
-                    <div class="d-grid gap-2 col-4 mx-auto">
-                        <button id="start_btn" class="mt-5 btn" style="font-size:xx-large;" type="button">START</button>
-                    </div>
+    
+    <div class="max-w-md mx-auto min-h-screen bg-white/95 shadow-xl relative overflow-hidden">
+        <!-- 시작화면 -->
+        <div id="main" class="block text-center mb-10">
+          <img class="w-full mx-auto mt-6" src="img/main-hero.jpg" alt="메인 이미지">
+            <div class="mt-8">                
+                <h3 class="mt-8 text-xl font-pretendard font-bold text-gray-800">우리 회사에는 어떤 유형이 알맞을지</h3>
+                <h3 class="mt-2 text-xl font-pretendard font-bold text-gray-800">테스트를 통해 알아보세요.</h3>
+                <button id="start_btn" class="mt-10 px-12 py-4 text-2xl font-pretendard font-bold bg-primary text-white rounded-xl shadow-lg hover:shadow-hover transition-all duration-300 transform hover:scale-105">
+                    테스트 시작
+                </button>
+                <div class="mt-4">
+                    <a href="https://oso.ma/qV9St" target="_blank" class="text-gray-800 hover:text-gray-600 font-medium transition-colors">
+                        모집공고 페이지로 이동
+                    </a>
                 </div>
             </div>
         </div>
+        
         <!-- 문제화면 -->
-        <div id="test" class="container">
-            <div class="row">
-                  <div class="col">
-                    <p id="number" class="mt-2">문제번호 1/16</p>
-                  </div>
-                <div class="col-12">
-                    <div class="progress">
-                        <div id="progress" class="progress-bar" role="progressbar" aria-valuemin="0"
-                            aria-valuemax="100"></div>
-                    </div>
-                    <h2 id="title" class="mt-5">문제 제목입니다.</h2>
-                    <!-- <img id="img" class="" src="img/main.jpg"> -->
-                    <h5 id="desc" style="font-size:x-large" class="mt-5 ms-5 me-5">문제의 구체적인 설명입니다.</h5>
+        <div id="test" class="hidden px-5 py-6 text-center">
+            <div class="bg-light rounded-xl p-4 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">총 18문항</span>
+                    <p id="number" class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">문제 1/18</p>
                 </div>
-                <div id="select_btn" class="col-12 d-grid gap-2 mt-5 mb-2">
-                    <button id="btnA" class="btn" style="font-size:x-large" type="button">선택값 A</button>
-                    <button id="btnB" class="btn" style="font-size:x-large" type="button">선택값 B</button>
-                    <button id="btnC" class="btn" style="font-size:x-large" type="button">선택값 C</button>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 mt-3">
+                    <div id="progress" class="bg-primary h-2.5 rounded-full" style="width: 5%"></div>
                 </div>
             </div>
+            
+            <div class="mt-6 bg-white rounded-xl shadow-card p-5">
+                <h2 id="title" class="text-xl font-bold text-primary border-b border-gray-100 pb-3">문제 제목입니다.</h2>
+                <h3 id="desc" class="mt-4 text-gray-700 leading-relaxed min-h-[50px] text-center">문제의 구체적인 설명입니다.</h3>
+            </div>
+            
+            <div class="mt-5 space-y-3">
+                <button id="btnA" class="w-full py-4 px-5 text-left font-medium bg-white border border-gray-200 text-gray-800 rounded-xl shadow-sm hover:border-primary hover:shadow-hover transition-all duration-200 flex items-start">
+                    <span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">A</span>
+                    <span class="option-text">선택값 A</span>
+                </button>
+                <button id="btnB" class="w-full py-4 px-5 text-left font-medium bg-white border border-gray-200 text-gray-800 rounded-xl shadow-sm hover:border-primary hover:shadow-hover transition-all duration-200 flex items-start">
+                    <span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">B</span>
+                    <span class="option-text">선택값 B</span>
+                </button>
+                <button id="btnC" class="w-full py-4 px-5 text-left font-medium bg-white border border-gray-200 text-gray-800 rounded-xl shadow-sm hover:border-primary hover:shadow-hover transition-all duration-200 flex items-start">
+                    <span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">C</span>
+                    <span class="option-text">선택값 C</span>
+                </button>
+            </div>
         </div>
+        
         <!-- 결과화면 -->
-        <div id="result" class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="mt-5">추천 유형</h1>
-                    <h2 id="result_title" class="mt-3"></h3>
-                    <h4 id="result_explain" class="mt-2 mb-3"></h3>
-                    <p id="result_text" class="mb-3"></p>
-                    <img id="score" class="img-fluid">
-                    <h4 id="count"></h4>
+        <div id="result" class="hidden px-4 py-8">
+            <div class="animate-fadeIn">
+                <div class="text-center">
+                    <span class="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-1 rounded-full">유형 분석 완료</span>
+                    <h1 class="mt-3 text-2xl font-bold text-gray-800">추천 유형</h1>
                 </div>
-                <div class="d-grid gap-2 mt-3">
-                    <a id="highscore" class="btn mt-2" style="font-size:x-large" href="https://touraz.kr/announcementList/pssrpView?pssrpSeqEnc=lUmYI50a^4u8CSpBZ36iqA==" onclick="sendEvent('goToNotice');">모집 공고 확인하기</a>
-                    <button id="retry_btn" class="btn mt-2" type="button" style="font-size:x-large">다시 테스트하기</button>
+                
+                <div class="mx-auto mt-6 bg-white rounded-2xl shadow-card overflow-hidden">
+                    <div class="bg-primary text-white p-5 text-center">
+                        <h2 id="result_title" class="text-2xl font-bold"></h2>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-5">
+                            <h4 id="result_explain" class="text-xl font-bold text-gray-800 text-center mb-5"></h4>
+                            <p id="result_intro" class="mt-2 text-base text-gray-600 text-center mb-2"></p>
+                        </div>
+                        
+                        <!-- 지원 내용 테이블 -->
+                        <div class="mt-6 flow-root">
+                            <div class="overflow-x-auto">
+                                <div class="inline-block min-w-full align-middle">
+                                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                        <table class="min-w-full divide-y divide-gray-200">
+                                            <thead class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col" class="py-3.5 px-4 text-center text-base font-semibold text-primary">지원 내용</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="support_items" class="divide-y divide-gray-200 bg-white">
+                                                <!-- 여기에 동적으로 지원 내용이 추가됩니다 -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="result_conclusion" class="mt-4 text-sm text-gray-700"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 space-y-3">
+                    <a id="highscore" class="block w-full py-4 text-center font-bold bg-primary text-white rounded-xl shadow-lg hover:opacity-70 transition-all duration-200" href="https://oso.ma/qV9St" target="_blank" onclick="sendEvent('goToNotice');">
+                        모집 공고 확인하기
+                    </a>
+                    <button id="retry_btn" class="w-full py-4 text-center font-bold bg-white text-gray-700 border border-gray-300 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-colors duration-200">
+                        다시 테스트하기
+                    </button>
                 </div>
             </div>
         </div>
-        <footer id="footer" class="mt-5 pb-3 text-center">
-            <a href="https://osoma.kr/" target="_blank">
-                <img class="footer_logo" src="https://osoma.kr/images/logo/logo_980x518_no-bg_dark.png" alt="오소마">
-            </a>
+        
+        <footer class="mt-10 pb-5 text-center">
+            <div class="flex flex-col items-center">
+                <p class="text-xs text-gray-500 mb-1">powered by</p>
+                <a href="https://osoma.kr/" target="_blank" class="inline-block opacity-100 hover:opacity-70 transition-opacity">
+                    <img class="w-32 inline-block" src="img/osoma-wide-black.svg" alt="오소마">
+                </a>
+            </div>
         </footer>
     </div>
-    <!-- JS Import -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- JS Import - 순서 중요! -->
+    <script src="questions.js"></script>
+    <script src="results.js"></script>
     <script src="score.js"></script>
     <script src="datalayer.js"></script>
 </body>

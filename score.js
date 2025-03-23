@@ -1,291 +1,262 @@
-// 질문리스트에 보여질 질문 객체로 문제 순서에 따라 각각 제목, 설명, 답변버튼, 답변에 해당하는 점수를 만들어 놓는다.
+// 각 유형별 누적 점수를 저장할 전역 변수입니다.
+var scoreA = 0;
+var scoreB = 0;
+var scoreC = 0;
 
-var testNum = {
-  1: {
-    title: "문제 1번",
-    desc: '광고 계정에 직접 들어가서 데이터를 보고 성과를 분석할 수 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  2: {
-    title: "문제 2번",
-    desc: '광고 매체에서 제공하는 보고서가 아닌, 주요지표 보고서를 자체적으로 만들어 효율을 체크하고 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  3: {
-    title: "문제 3번",
-    desc: '고객 세그먼트를 이용해 세부적인 타겟팅 광고를 집행하고 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  4: {
-    title: "문제 4번",
-    desc: 'Paid/오가닉 매체의 운영 목표가 수치화 되어있고 그 전환당 비용에 대해 잘 파악하고 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  5: {
-    title: "문제 5번",
-    desc: 'CTR, CPC, CVR, CPA, CAC 등의 디지털 마케팅 주요 기본 용어들이 뭔지 알고 설명할 수 있다. ',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  6: {
-    title: "문제 6번",
-    desc: '페이스북/인스타그램, 네이버 검색광고 등 광고의 소재, 광고그룹 세팅 등을 직접 진행할 수 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  7: {
-    title: "문제 7번",
-    desc: '사용자 유입 데이터를 활용해서 유저 행동/전환 현황을 확인할 수 있다.',
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  8: {
-    title: "문제 8번",
-    desc: '현재 웹사이트 혹은 모바일 앱에서 유입, 조회, 검색, 구매, 가입 등의 유저 행동 데이터를 수집하고 있다.',
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  9: {
-    title: "문제 9번",
-    desc: '현재 광고 추적을 위한 공통/전환 스크립트가 심어져 있다.',
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  10: {
-    title: "문제 10번",
-    desc: 'UTM(또는 추적 파라미터)의 개념을 알고 설명할 수 있다.',
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  11: {
-    title: "문제 11번",
-    desc: `트래킹을 위한 '이벤트'의 개념에 대해 알고 있으며 자사 서비스의 이벤트 구조를 직접 설계할 수 있다.`,
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  12: {
-    title: "문제 12번",
-    desc: '수집하고 있는 사용자의 행동 데이터를 정리한 이벤트 정의서(택소노미) 문서가 있다.',
-    A: "그렇다",
-    valueA: 1,
-    B: "아니다",
-    valueB: -1,
-    C: "모르겠다",
-    valueC: -1
-  },
-  13: {
-    title: "문제 13번",
-    desc: '자사 주력 제품의 최근 3개월 전환 추이를 파악하고 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  14: {
-    title: "문제 14번",
-    desc: '자사 제품/서비스의 핵심 타겟이 어떤 사람들인지 설명할 수 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  15: {
-    title: "문제 15번",
-    desc: '최근 1개월 내 자사 제품/서비스가 직면한 문제 상황을 파악하고 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-  16: {
-    title: "문제 16번",
-    desc: '월별, 분기별 마케팅팀의 최우선 달성 목표(KPI)를 알고 있으며 최근 달성 현황이 어떤지 설명할 수 있다.',
-    A: "그렇다",
-    valueA: 0,
-    B: "아니다",
-    valueB: 0,
-    C: "모르겠다",
-    valueC: 0
-  },
-};
+// 문제 진행 변수 (문항 번호, 초기값 1)
+var i = 1;
 
-// result라는 결과 객체를 json형태로 만들고 결과 유형에 따른 결과 타이틀과 결과에 대한 설명을 그에 맞게 넣어준다.
-// A~J라는 타입 유형은 값을 전달하는데만 사용되므로 값은 바꿔도 좋으며, 변경할 때 아래 score 범위에 들어가는 타입 값도 반드시 함께 바꿔야 한다.
-
-var result = {
-  B: {
-    type: "[유형 1]",
-    title: "데이터 분석환경 구축 및 시각화",
-    text: `지금은 데이터 분석 환경 구축이 필요한 단계입니다.<br>유형 1을 통해 GA4, BigQuery, Looker Studio 등을 활용한 데이터 환경을 만들어보세요.`
-  },
-  A: {
-    type: "[유형 2]",
-    title: "그로스해킹 기반 데이터 활용 및 컨설팅",
-    text: `데이터 마케팅을 위해 필요한 역량을 갖추고 있는 기업으로 판단됩니다.<br>그로스해킹 지원사업을 통해 더욱 효과적인 마케팅 성과를 만들어보세요.`
-  }
-};
-
-// 테스트를 시작하는 함수
-// testStart라는 변수를 만들고 #main의 내용이 보여지지 않고, 보여지지 않던 #test의 내용이 보여지도록 하는 내용을 넣는다.
+// 테스트 시작 함수: 시작 화면(#main)을 숨기고, 문제 화면(#test)을 표시합니다.
 var testStart = function () {
   document.querySelector("#main").style.display = "none";
   document.querySelector("#test").style.display = "block";
-  sendEvent("startTest"); // 테스트 시작 데이터영역 실행
+  sendEvent("startTest");
+  
+  // i를 0으로 설정하여 next() 함수에서 i++가 실행되면 1이 되도록 함
+  i = 0;
   next();
 };
 
-// #start_btn이라는 영역에 이벤트리스너를 넣고 click시 testStart를 작동하게 한다.
 document.querySelector("#start_btn").addEventListener("click", testStart);
 
-//#btnA 등 각각 답변 버튼 4개가 속한 영역를 뜻하는 변수로 만든다.
-var selectA = document.querySelector("#btnA");
-var selectB = document.querySelector("#btnB");
-var selectC = document.querySelector("#btnC");
-
-// 테스트 결과에 따른 합계점수를 넣을 score라는 변수를 만들고 초기 값은 0으로 설정한다.
-var score = 0;
-var count = 0;
-
-// btnA라는 값이 들어간 div태그 id영역에 이벤트리스너를 넣고 클릭 시 아래와 같은 함수가 작동하게 한다.
-// score라는 변수에 testNum[질문번호][질문번호와 버튼에 해당하는 점수]을 숫자형태로 더하고 next라는 함수가 작동한다.
-document.querySelector("#btnA").addEventListener("click", function () {
-  score += parseInt(testNum[i - 1]["valueA"]);
-  if (testNum[i - 1]["valueA"] > 5) {
-    count += 1;
-  }
-  answerQuestion(i - 1, "A"); // 정답 선택 데이터영역 실행
-  next();
-});
-
-document.querySelector("#btnB").addEventListener("click", function () {
-  score += parseInt(testNum[i - 1]["valueB"]);
-  if (testNum[i - 1]["valueB"] > 5) {
-    count += 1;
-  }
-  answerQuestion(i - 1, "B"); // 정답 선택 데이터영역 실행
-  next();
-});
-
-document.querySelector("#btnC").addEventListener("click", function () {
-  score += parseInt(testNum[i - 1]["valueC"]);
-  if (testNum[i - 1]["valueC"] > 5) {
-    count += 1;
-  }
-  answerQuestion(i - 1, "C"); // 정답 선택 데이터영역 실행
-  next();
-});
-
-// 문제 번호를 의미하는 변수 i를 생성한다.
-// 이 후 답을 클릭할 때 변수 i에 1씩 숫자를 더해 질문번호가 넘어가고 그에 맞는 값을 가져오는 중요한 역할을 한다.
-var i = 1;
-
-// next라는 변수를 만들고 "다음 액션"에 대한 내용을 넣는다.
-// 특히 문제가 총 10개로 기획되었기 떄문에 i == 11이 되면 #test 화면이 사라지고, #result 화면이 나타나는 것으로 시작한다.
-// 그리고 10문제동안 득점한 score에 따라 각각 범위에 맞는 scoreRange를 얻는다.
-// 이렇게 얻은 scoreRange는 결과에 따른 제목, 설명, 이미지 등을 노출할 때 중요한 역할을 한다.
+// 문제 진행 함수: 모든 문항이 끝나면 결과 화면(#result)을 표시합니다.
 var next = function () {
-  if (i == 17) {
+  i++;
+  console.log(`다음 문항 ${i}로 이동`);
+  
+  // testNum 객체의 키 목록을 가져와서 최대 문항 수 확인
+  var questionKeys = Object.keys(testNum);
+  var maxQuestions = Math.max(...questionKeys);
+  console.log(`최대 문항 수: ${maxQuestions}, 현재 문항: ${i}`);
+  
+  if (i > maxQuestions) { // 마지막 문항 이후
+    console.log("모든 문항 완료, 결과 화면으로 전환");
     document.querySelector("#test").style.display = "none";
     document.querySelector("#result").style.display = "block";
-    if (score > 0) {
-      var scoreRange = "A";
-      var scoreElement = document.getElementById('score');
-      scoreElement.src = "img/growth.png";
+    
+    // 최종 점수 로그
+    console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+    
+    // 최종 누적 점수를 비교해 가장 높은 점수를 받은 유형을 결정합니다.
+    var finalType;
+    if (scoreA >= scoreB && scoreA >= scoreC) {
+      finalType = "A";
+    } else if (scoreB >= scoreA && scoreB >= scoreC) {
+      finalType = "B";
     } else {
-      var scoreRange = "B";
-      var scoreElement = document.getElementById('score');
-      scoreElement.src = "img/data.png";
+      finalType = "C";
     }
-    // 결과 도출 화면
-    // #score부분에 들어가는 텍스트는 score에 쌓인 점수로 교체한다.
-    // #result_title에는 결과 객체에서 scoreRange에 맞는 유형의 explain에 할당된 값이 대체되어 보여진다.
-    document.querySelector("#score").innerHTML = "<br>" + score + "점";
-    document.querySelector("#count").innerHTML = "1";
-    document.querySelector("#result_title").innerHTML = result[scoreRange]["type"];
-    document.querySelector("#result_explain").innerHTML = result[scoreRange]["title"];
-    document.querySelector("#result_text").innerHTML = result[scoreRange]["text"];
-
-    resultEvent("viewResult", result[scoreRange]["type"]); // 테스트 결과 데이터영역 실행
+    
+    var totalScore = scoreA + scoreB + scoreC;
+    
+    // 결과 스타일링은 이제 Tailwind CSS 클래스로 처리
+    document.querySelector("#result").classList.add("block");
+    
+    // 유형 및 제목 설정
+    document.querySelector("#result_title").innerHTML = result[finalType]["type"];
+    
+    // 결과 설명 업데이트
+    document.querySelector("#result_explain").innerHTML = result[finalType]["title"];
+    
+    // 결과 세부 내용 파싱
+    var resultTextContent = result[finalType]["text"];
+    var textParts = resultTextContent.split('\n');
+    
+    // 첫 줄은 소개 텍스트로 설정
+    document.querySelector("#result_intro").innerHTML = textParts[0];
+    
+    // 지원 내용 항목을 테이블로 변환
+    var supportItemsHtml = '';
+    
+    // 불릿 포인트 항목 파싱 (•로 시작하는 줄)
+    for (var j = 1; j < textParts.length; j++) {
+      var line = textParts[j].trim();
+      if (line.startsWith('•')) {
+        var itemText = line.substring(1).trim();
+        
+        // 항목과 설명 분리 (있을 경우)
+        var itemParts = itemText.split(':');
+        var itemTitle = itemParts[0].trim();
+        var itemDesc = itemParts.length > 1 ? itemParts[1].trim() : '';
+        
+        // 설명이 없는 경우, 제목 전체를 표시
+        if (itemDesc === '') {
+          supportItemsHtml += `
+            <tr>
+              <td class="py-3 px-4 text-base font-medium text-gray-900 text-center" colspan="2">${itemTitle}</td>
+            </tr>
+          `;
+        } else {
+          supportItemsHtml += `
+            <tr>
+              <td class="py-3 px-4 text-base font-medium text-primary text-center">${itemTitle}</td>
+              <td class="py-3 px-4 text-base text-gray-700 text-center">${itemDesc}</td>
+            </tr>
+          `;
+        }
+      }
+    }
+    
+    document.querySelector("#support_items").innerHTML = supportItemsHtml;
+    
+    // 마지막 텍스트 줄은 결론으로 설정 (불릿 포인트 이후의 텍스트)
+    var conclusionFound = false;
+    for (var k = textParts.length - 1; k >= 0; k--) {
+      if (!textParts[k].trim().startsWith('•') && textParts[k].trim() !== '') {
+        if (k > 0) { // 첫 줄이 아닌 경우 (첫 줄은 이미 소개로 사용)
+          document.querySelector("#result_conclusion").innerHTML = textParts[k];
+          conclusionFound = true;
+        }
+        break;
+      }
+    }
+    
+    // 결론이 없는 경우 요소 숨김
+    if (!conclusionFound) {
+      document.querySelector("#result_conclusion").style.display = "none";
+    }
+    
+    console.log(`결과 화면 업데이트 완료: ${finalType} 유형`);
+    resultEvent("viewResult", result[finalType]["type"], scoreA, scoreB, scoreC);
   } else {
-    // i가 11보다 작은 수라면 변수 i에 따라 질문 리스트 내용이 변한다.
-    // 변하는 항목은 문제번호, 진행상황 바, 질문 제목, 질문 설명, 버튼 설명이고 버튼 선택 후 i에 1만큼 더해진다.
-    document.querySelector("#number").innerHTML = i + "/16";
-    document.querySelector("#progress").style.width = (i / 16) * 100 + "%";
-    document.querySelector("#title").innerHTML = testNum[i]["title"];
-    document.querySelector("#desc").innerHTML = testNum[i]["desc"];
-    document.querySelector("#btnA").innerHTML = testNum[i]["A"];
-    document.querySelector("#btnB").innerHTML = testNum[i]["B"];
-    document.querySelector("#btnC").innerHTML = testNum[i]["C"];
-    viewQuestion(i, testNum[i]["title"]); // 문제 보기 데이터영역 실행
-    i++;
+    // 문항이 존재하는지 확인
+    if (!testNum[i]) {
+      console.warn(`문항 ${i}가 존재하지 않습니다. 다음 문항 탐색`);
+      i++; // 존재하지 않으면 다음 문항으로
+      if (i > maxQuestions) {
+        console.log("더 이상 문항이 없음, 결과 화면으로 전환");
+        // 결과 화면 표시 로직
+        document.querySelector("#test").style.display = "none";
+        document.querySelector("#result").style.display = "block";
+        console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+        return;
+      }
+    }
+    
+    // testNum[i] 객체 구조 로그
+    console.log(`현재 문항 객체:`, testNum[i]);
+    
+    try {
+      // 문제 화면 업데이트
+      document.querySelector("#number").innerHTML = "문제 " + i + "/18";
+      document.querySelector("#progress").style.width = (i / 18) * 100 + "%";
+      document.querySelector("#title").innerHTML = testNum[i]["title"];
+      document.querySelector("#desc").innerHTML = testNum[i]["desc"];
+      
+      // 선택지 업데이트 - 옵션 텍스트를 span으로 감싸 스타일링 개선
+      document.querySelector("#btnA").innerHTML = '<span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">A</span><span class="option-text">' + testNum[i]["A"] + '</span>';
+      document.querySelector("#btnB").innerHTML = '<span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">B</span><span class="option-text">' + testNum[i]["B"] + '</span>';
+      document.querySelector("#btnC").innerHTML = '<span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">C</span><span class="option-text">' + testNum[i]["C"] + '</span>';
+      
+      console.log(`문항 ${i} 화면 업데이트 완료`);
+      viewQuestion(i, testNum[i]["title"]);
+      
+      // 선택 상태 초기화
+      clearSelectionState();
+      
+    } catch (error) {
+      console.error(`문항 ${i} 화면 업데이트 중 오류 발생:`, error);
+      console.log(`문항 데이터:`, testNum[i]);
+    }
   }
 };
 
-// 다시 시작하기 함수
-// retry라는 변수를 만들고 #result 내용이 사라지고, #test 내용이 나타나게 만든다.
-// 이 때, i=1로 초기화하고, score는 =0으로 초기화한 다음 next(226행 참고) 함수를 실행시킨다.
+// 재시작 함수: 결과 화면에서 '다시 테스트하기' 버튼 클릭 시 테스트를 초기화합니다.
 var retry = function () {
   sendEvent("retryTest");
   document.querySelector("#result").style.display = "none";
   document.querySelector("#main").style.display = "block";
   i = 1;
-  score = 0;
-  count = 0;
+  scoreA = 0;
+  scoreB = 0;
+  scoreC = 0;
   history.replaceState({ data: "retry" }, "", "/");
 };
-// #retry_btn에 이벤트리스너를 넣고 'click' 되었을 때 retry가 실행되도록 한다.
+
 document.querySelector("#retry_btn").addEventListener("click", retry);
+
+// 초기 로딩시 testNum 객체 전체 구조 로그
+console.log('테스트 초기화');
+console.log('testNum 객체 구조:', testNum);
+console.log('시작 문항:', i);
+
+// 선택한 버튼 강조 표시 함수
+function selectOption(button) {
+  // 모든 버튼에서 선택 클래스 제거
+  clearSelectionState();
+  
+  // 클릭한 버튼에 선택 클래스 추가
+  button.classList.add('option-selected');
+}
+
+// 선택 상태 초기화 함수
+function clearSelectionState() {
+  document.querySelector("#btnA").classList.remove('option-selected');
+  document.querySelector("#btnB").classList.remove('option-selected');
+  document.querySelector("#btnC").classList.remove('option-selected');
+}
+
+// 버튼 클릭 이벤트 리스너 수정 - 선택 효과 추가
+var btnA = document.querySelector("#btnA");
+var btnB = document.querySelector("#btnB");
+var btnC = document.querySelector("#btnC");
+
+// 기존 이벤트 리스너 제거 및 새 리스너 추가
+btnA.removeEventListener("click", btnA.clickHandler);
+btnB.removeEventListener("click", btnB.clickHandler);
+btnC.removeEventListener("click", btnC.clickHandler);
+
+// 새 이벤트 리스너 함수 정의
+btnA.clickHandler = function() {
+  console.log(`문항 ${i} - A 선택함`);
+  selectOption(btnA);
+  if (!testNum[i]) {
+    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    return;
+  }
+  var current = testNum[i];
+  scoreA += current.valueA.A;
+  scoreB += current.valueA.B;
+  scoreC += current.valueA.C;
+  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  answerQuestion(i, "A");
+  // 잠시 지연 후 다음 문항으로 이동 (선택 효과 표시를 위해)
+  setTimeout(next, 300);
+};
+
+btnB.clickHandler = function() {
+  console.log(`문항 ${i} - B 선택함`);
+  selectOption(btnB);
+  if (!testNum[i]) {
+    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    return;
+  }
+  var current = testNum[i];
+  scoreA += current.valueB.A;
+  scoreB += current.valueB.B;
+  scoreC += current.valueB.C;
+  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  answerQuestion(i, "B");
+  setTimeout(next, 300);
+};
+
+btnC.clickHandler = function() {
+  console.log(`문항 ${i} - C 선택함`);
+  selectOption(btnC);
+  if (!testNum[i]) {
+    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    return;
+  }
+  var current = testNum[i];
+  scoreA += current.valueC.A;
+  scoreB += current.valueC.B;
+  scoreC += current.valueC.C;
+  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  answerQuestion(i, "C");
+  setTimeout(next, 300);
+};
+
+// 새 이벤트 리스너 등록
+btnA.addEventListener("click", btnA.clickHandler);
+btnB.addEventListener("click", btnB.clickHandler);
+btnC.addEventListener("click", btnC.clickHandler);
