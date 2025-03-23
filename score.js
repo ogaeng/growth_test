@@ -22,20 +22,20 @@ document.querySelector("#start_btn").addEventListener("click", testStart);
 // 문제 진행 함수: 모든 문항이 끝나면 결과 화면(#result)을 표시합니다.
 var next = function () {
   i++;
-  console.log(`다음 문항 ${i}로 이동`);
+  // console.log(`다음 문항 ${i}로 이동`);
   
   // testNum 객체의 키 목록을 가져와서 최대 문항 수 확인
   var questionKeys = Object.keys(testNum);
   var maxQuestions = Math.max(...questionKeys);
-  console.log(`최대 문항 수: ${maxQuestions}, 현재 문항: ${i}`);
+  // console.log(`최대 문항 수: ${maxQuestions}, 현재 문항: ${i}`);
   
   if (i > maxQuestions) { // 마지막 문항 이후
-    console.log("모든 문항 완료, 결과 화면으로 전환");
+    // console.log("모든 문항 완료, 결과 화면으로 전환");
     document.querySelector("#test").style.display = "none";
     document.querySelector("#result").style.display = "block";
     
     // 최종 점수 로그
-    console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+    // console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
     
     // 최종 누적 점수를 비교해 가장 높은 점수를 받은 유형을 결정합니다.
     var finalType;
@@ -116,25 +116,25 @@ var next = function () {
       document.querySelector("#result_conclusion").style.display = "none";
     }
     
-    console.log(`결과 화면 업데이트 완료: ${finalType} 유형`);
+    // console.log(`결과 화면 업데이트 완료: ${finalType} 유형`);
     resultEvent("viewResult", result[finalType]["type"], scoreA, scoreB, scoreC);
   } else {
     // 문항이 존재하는지 확인
     if (!testNum[i]) {
-      console.warn(`문항 ${i}가 존재하지 않습니다. 다음 문항 탐색`);
+      // console.warn(`문항 ${i}가 존재하지 않습니다. 다음 문항 탐색`);
       i++; // 존재하지 않으면 다음 문항으로
       if (i > maxQuestions) {
-        console.log("더 이상 문항이 없음, 결과 화면으로 전환");
+        // console.log("더 이상 문항이 없음, 결과 화면으로 전환");
         // 결과 화면 표시 로직
         document.querySelector("#test").style.display = "none";
         document.querySelector("#result").style.display = "block";
-        console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+        // console.log(`최종 점수: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
         return;
       }
     }
     
     // testNum[i] 객체 구조 로그
-    console.log(`현재 문항 객체:`, testNum[i]);
+    // console.log(`현재 문항 객체:`, testNum[i]);
     
     try {
       // 문제 화면 업데이트
@@ -148,15 +148,15 @@ var next = function () {
       document.querySelector("#btnB").innerHTML = '<span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">B</span><span class="option-text">' + testNum[i]["B"] + '</span>';
       document.querySelector("#btnC").innerHTML = '<span class="inline-flex justify-center items-center bg-primary text-white rounded-full w-6 h-6 mr-3 flex-shrink-0 text-sm">C</span><span class="option-text">' + testNum[i]["C"] + '</span>';
       
-      console.log(`문항 ${i} 화면 업데이트 완료`);
+      // console.log(`문항 ${i} 화면 업데이트 완료`);
       viewQuestion(i, testNum[i]["title"]);
       
       // 선택 상태 초기화
       clearSelectionState();
       
     } catch (error) {
-      console.error(`문항 ${i} 화면 업데이트 중 오류 발생:`, error);
-      console.log(`문항 데이터:`, testNum[i]);
+      // console.error(`문항 ${i} 화면 업데이트 중 오류 발생:`, error);
+      // console.log(`문항 데이터:`, testNum[i]);
     }
   }
 };
@@ -176,9 +176,9 @@ var retry = function () {
 document.querySelector("#retry_btn").addEventListener("click", retry);
 
 // 초기 로딩시 testNum 객체 전체 구조 로그
-console.log('테스트 초기화');
-console.log('testNum 객체 구조:', testNum);
-console.log('시작 문항:', i);
+// console.log('테스트 초기화');
+// console.log('testNum 객체 구조:', testNum);
+// console.log('시작 문항:', i);
 
 // 선택한 버튼 강조 표시 함수
 function selectOption(button) {
@@ -208,50 +208,50 @@ btnC.removeEventListener("click", btnC.clickHandler);
 
 // 새 이벤트 리스너 함수 정의
 btnA.clickHandler = function() {
-  console.log(`문항 ${i} - A 선택함`);
+  // console.log(`문항 ${i} - A 선택함`);
   selectOption(btnA);
   if (!testNum[i]) {
-    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    // console.error(`문항 ${i}가 존재하지 않습니다.`);
     return;
   }
   var current = testNum[i];
   scoreA += current.valueA.A;
   scoreB += current.valueA.B;
   scoreC += current.valueA.C;
-  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  // console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
   answerQuestion(i, "A");
   // 잠시 지연 후 다음 문항으로 이동 (선택 효과 표시를 위해)
   setTimeout(next, 300);
 };
 
 btnB.clickHandler = function() {
-  console.log(`문항 ${i} - B 선택함`);
+  // console.log(`문항 ${i} - B 선택함`);
   selectOption(btnB);
   if (!testNum[i]) {
-    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    // console.error(`문항 ${i}가 존재하지 않습니다.`);
     return;
   }
   var current = testNum[i];
   scoreA += current.valueB.A;
   scoreB += current.valueB.B;
   scoreC += current.valueB.C;
-  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  // console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
   answerQuestion(i, "B");
   setTimeout(next, 300);
 };
 
 btnC.clickHandler = function() {
-  console.log(`문항 ${i} - C 선택함`);
+  // console.log(`문항 ${i} - C 선택함`);
   selectOption(btnC);
   if (!testNum[i]) {
-    console.error(`문항 ${i}가 존재하지 않습니다.`);
+    // console.error(`문항 ${i}가 존재하지 않습니다.`);
     return;
   }
   var current = testNum[i];
   scoreA += current.valueC.A;
   scoreB += current.valueC.B;
   scoreC += current.valueC.C;
-  console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
+  // console.log(`점수 업데이트: A=${scoreA}, B=${scoreB}, C=${scoreC}`);
   answerQuestion(i, "C");
   setTimeout(next, 300);
 };
