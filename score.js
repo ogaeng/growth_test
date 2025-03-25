@@ -138,8 +138,8 @@ var next = function () {
     
     try {
       // 문제 화면 업데이트
-      document.querySelector("#number").innerHTML = "문제 " + i + "/18";
-      document.querySelector("#progress").style.width = (i / 18) * 100 + "%";
+      document.querySelector("#number").innerHTML = "문제 " + i + "/14";
+      document.querySelector("#progress").style.width = (i / 14) * 100 + "%";
       document.querySelector("#title").innerHTML = testNum[i]["title"];
       document.querySelector("#desc").innerHTML = testNum[i]["desc"];
       
