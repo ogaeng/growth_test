@@ -1,53 +1,86 @@
-<?xml version="1.0"?>
-<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
-  <channel>
-    <title>호텔에삶</title>
-    <link>https://www.livinginhotel.com/</link>
-    <description>호텔에삶 숙박 상품 데이터 피드</description>
-    <item>
-      <title>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</title>
-      <link>https://www.livinginhotel.com/hotel/17</link>
-      <description>용산역 3분 위치 앰배서더 서울 용산</description>
-      <g:hotel_id>17</g:hotel_id>
-      <g:name>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</g:name>
-      <g:address>용산역3분</g:address>
-      <g:city>서울</g:city>
-			<g:country>KR</g:country>
-      <g:description>용산역 3분 위치 앰배서더 서울 용산</g:description>
-      <g:availability>in stock</g:availability>
-      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</g:image_url>
-      <g:url>https://www.livinginhotel.com/hotel/17</g:url>
-      <g:price>2919000 KRW</g:price>
-    </item>
-    <item>
-      <title>서울드래곤시티 - 노보텔 앰배서더 서울 용산</title>
-      <link>https://www.livinginhotel.com/hotel/92</link>
-      <description>용산역 3분 위치 노보텔 앰배서더 서울 용산</description>
-      <g:hotel_id>92</g:hotel_id>
-      <g:name>서울드래곤시티 - 노보텔 앰배서더 서울 용산</g:name>
-      <g:address>용산역3분</g:address>
-      <g:city>서울</g:city>
-			<g:country>KR</g:country>
-      <g:description>용산역 3분 위치 노보텔 앰배서더 서울 용산</g:description>
-      <g:availability>in stock</g:availability>
-      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</g:image_url>
-      <g:url>https://www.livinginhotel.com/hotel/92</g:url>
-      <g:price>3444000 KRW</g:price>
-    </item>
-    <item>
-      <title>호텔 더 보타닉 세운 명동</title>
-      <link>https://www.livinginhotel.com/hotel/489</link>
-      <description>을지로역 근처 호텔 더 보타닉 세운 명동</description>
-      <g:hotel_id>489</g:hotel_id>
-      <g:name>호텔 더 보타닉 세운 명동</g:name>
-      <g:address>을지로4가역</g:address>
-      <g:city>서울</g:city>
-			<g:country>KR</g:country>
-      <g:description>을지로역 근처 호텔 더 보타닉 세운 명동</g:description>
-      <g:availability>in stock</g:availability>
-      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</g:image_url>
-      <g:url>https://www.livinginhotel.com/hotel/489</g:url>
-      <g:price>1296000 KRW</g:price>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<listings>
+  <listing>
+    <hotel_id>17</hotel_id>
+    <name>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</name>
+    <description>용산역에서 도보 3분 거리에 위치한 이비스 스타일 앰배서더 서울 용산은 비즈니스 및 레저 여행객 모두에게 완벽한 숙박 시설입니다. 현대적인 시설과 편안한 객실을 제공합니다.</description>
+    <url>https://www.livinginhotel.com/hotel/17</url>
+    <brand>이비스 스타일</brand>
+    <address>
+      <addr1>용산역 3분 거리</addr1>
+      <city>서울</city>
+      <region>서울특별시</region>
+      <country>KR</country>
+      <postal_code>04372</postal_code>
+    </address>
+    <neighborhood>용산구</neighborhood>
+    <latitude>37.5326</latitude>
+    <longitude>126.9652</longitude>
+    <image>
+      <url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</url>
+      <tag>exterior</tag>
+    </image>
+    <price>291900.00 KRW</price>
+    <base_price>291900.00 KRW</base_price>
+    <star_rating>4.0</star_rating>
+    <phone>+82-2-6379-8888</phone>
+    <category>Business Hotel</category>
+    <status>active</status>
+  </listing>
+  
+  <listing>
+    <hotel_id>92</hotel_id>
+    <name>서울드래곤시티 - 노보텔 앰배서더 서울 용산</name>
+    <description>용산역에서 도보 3분 거리에 위치한 노보텔 앰배서더 서울 용산은 프리미엄 비즈니스 호텔로, 뛰어난 서비스와 편의시설을 제공합니다. 국제회의센터와 연결되어 있어 비즈니스 출장에 최적입니다.</description>
+    <url>https://www.livinginhotel.com/hotel/92</url>
+    <brand>노보텔</brand>
+    <address>
+      <addr1>용산역 3분 거리</addr1>
+      <city>서울</city>
+      <region>서울특별시</region>
+      <country>KR</country>
+      <postal_code>04372</postal_code>
+    </address>
+    <neighborhood>용산구</neighborhood>
+    <latitude>37.5326</latitude>
+    <longitude>126.9652</longitude>
+    <image>
+      <url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</url>
+      <tag>exterior</tag>
+    </image>
+    <price>344400.00 KRW</price>
+    <base_price>344400.00 KRW</base_price>
+    <star_rating>5.0</star_rating>
+    <phone>+82-2-6379-8000</phone>
+    <category>Luxury Business Hotel</category>
+    <status>active</status>
+  </listing>
+  
+  <listing>
+    <hotel_id>489</hotel_id>
+    <name>호텔 더 보타닉 세운 명동</name>
+    <description>을지로 4가역과 명동 근처에 위치한 호텔 더 보타닉 세운 명동은 서울의 중심가에서 편리한 접근성을 제공합니다. 현대적인 디자인과 친환경적인 컨셉으로 꾸며진 부티크 호텔입니다.</description>
+    <url>https://www.livinginhotel.com/hotel/489</url>
+    <brand>더 보타닉</brand>
+    <address>
+      <addr1>을지로4가역 근처</addr1>
+      <city>서울</city>
+      <region>서울특별시</region>
+      <country>KR</country>
+      <postal_code>04530</postal_code>
+    </address>
+    <neighborhood>중구</neighborhood>
+    <latitude>37.5665</latitude>
+    <longitude>126.9918</longitude>
+    <image>
+      <url>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</url>
+      <tag>exterior</tag>
+    </image>
+    <price>129600.00 KRW</price>
+    <base_price>129600.00 KRW</base_price>
+    <star_rating>4.0</star_rating>
+    <phone>+82-2-2266-9000</phone>
+    <category>Boutique Hotel</category>
+    <status>active</status>
+  </listing>
+</listings>
