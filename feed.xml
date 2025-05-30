@@ -6,13 +6,11 @@
     <description>용산역에서 도보 3분 거리에 위치한 이비스 스타일 앰배서더 서울 용산은 비즈니스 및 레저 여행객 모두에게 완벽한 숙박 시설입니다. 현대적인 시설과 편안한 객실을 제공합니다.</description>
     <url>https://www.livinginhotel.com/hotel/17</url>
     <brand>이비스 스타일</brand>
-    <address>
-      <addr1>용산역 3분 거리</addr1>
-      <city>서울</city>
-      <region>서울특별시</region>
-      <country>KR</country>
-      <postal_code>04372</postal_code>
-    </address>
+    <street_address>95 청파로 용산구</street_address>
+    <city>서울</city>
+    <region>서울특별시</region>
+    <country>KR</country>
+    <postal_code>04372</postal_code>
     <neighborhood>용산구</neighborhood>
     <latitude>37.5326</latitude>
     <longitude>126.9652</longitude>
@@ -34,13 +32,11 @@
     <description>용산역에서 도보 3분 거리에 위치한 노보텔 앰배서더 서울 용산은 프리미엄 비즈니스 호텔로, 뛰어난 서비스와 편의시설을 제공합니다. 국제회의센터와 연결되어 있어 비즈니스 출장에 최적입니다.</description>
     <url>https://www.livinginhotel.com/hotel/92</url>
     <brand>노보텔</brand>
-    <address>
-      <addr1>용산역 3분 거리</addr1>
-      <city>서울</city>
-      <region>서울특별시</region>
-      <country>KR</country>
-      <postal_code>04372</postal_code>
-    </address>
+    <street_address>95 청파로 용산구</street_address>
+    <city>서울</city>
+    <region>서울특별시</region>
+    <country>KR</country>
+    <postal_code>04372</postal_code>
     <neighborhood>용산구</neighborhood>
     <latitude>37.5326</latitude>
     <longitude>126.9652</longitude>
@@ -62,13 +58,11 @@
     <description>을지로 4가역과 명동 근처에 위치한 호텔 더 보타닉 세운 명동은 서울의 중심가에서 편리한 접근성을 제공합니다. 현대적인 디자인과 친환경적인 컨셉으로 꾸며진 부티크 호텔입니다.</description>
     <url>https://www.livinginhotel.com/hotel/489</url>
     <brand>더 보타닉</brand>
-    <address>
-      <addr1>을지로4가역 근처</addr1>
-      <city>서울</city>
-      <region>서울특별시</region>
-      <country>KR</country>
-      <postal_code>04530</postal_code>
-    </address>
+    <street_address>16 세운로 중구</street_address>
+    <city>서울</city>
+    <region>서울특별시</region>
+    <country>KR</country>
+    <postal_code>04530</postal_code>
     <neighborhood>중구</neighborhood>
     <latitude>37.5665</latitude>
     <longitude>126.9918</longitude>
