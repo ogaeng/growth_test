@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>호텔에삶</title>
+    <link>https://www.livinginhotel.com/</link>
+    <description>호텔에삶 숙박 상품 데이터 피드</description>
+    <item>
+      <g:hotel_id>17</g:hotel_id>
+      <g:name>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</g:name>
+      <g:address>용산역3분</g:address>
+      <g:city>서울</g:city>
+			<g:country>KR</g:country>
+      <g:description>용산역 3분 위치 앰배서더 서울 용산</g:description>
+      <g:availability>in stock</g:availability>
+      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</g:image_url>
+      <g:url>https://www.livinginhotel.com/hotel/17</g:url>
+      <g:price>2919000 KRW</g:price>
+    </item>
+     <item>
+      <g:hotel_id>92</g:hotel_id>
+      <g:name>서울드래곤시티 - 노보텔 앰배서더 서울 용산</g:name>
+      <g:address>용산역3분</g:address>
+      <g:city>서울</g:city>
+			<g:country>KR</g:country>
+      <g:description>용산역 3분 위치 노보텔 앰배서더 서울 용산</g:description>
+      <g:availability>in stock</g:availability>
+      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</g:image_url>
+      <g:url>https://www.livinginhotel.com/hotel/92</g:url>
+      <g:price>3444000 KRW</g:price>
+    </item>
+      <item>
+      <g:hotel_id>489</g:hotel_id>
+      <g:name>호텔 더 보타닉 세운 명동</g:name>
+      <g:address>을지로4가역</g:address>
+      <g:city>서울</g:city>
+			<g:country>KR</g:country>
+      <g:description>을지로역 근처 호텔 더 보타닉 세운 명동</g:description>
+      <g:availability>in stock</g:availability>
+      <g:image_url>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</g:image_url>
+      <g:url>https://www.livinginhotel.com/hotel/489</g:url>
+      <g:price>1296000 KRW</g:price>
+    </item>
+  </channel>
+</rss>
