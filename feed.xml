@@ -9,18 +9,15 @@
         <address format="simple">
             <component name="addr1">95 청파로</component>
             <component name="city">서울</component>
-            <component name="city_id">SEL</component>
             <component name="region">서울특별시</component>
             <component name="country">KR</component>
         </address>
+        <latitude>37.5326</latitude>
+        <longitude>126.9652</longitude>
         <neighborhood>용산구</neighborhood>
-        <neighborhood>드래곤시티</neighborhood>
-        <margin_level>7</margin_level>
         <base_price>291900.00 KRW</base_price>
         <image>
             <url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</url>
-            <tag>exterior</tag>
-            <tag>building</tag>
         </image>
         <url>https://www.livinginhotel.com/hotel/17</url>
         <status>active</status>
@@ -34,18 +31,15 @@
         <address format="simple">
             <component name="addr1">95 청파로</component>
             <component name="city">서울</component>
-            <component name="city_id">SEL</component>
             <component name="region">서울특별시</component>
             <component name="country">KR</component>
         </address>
+        <latitude>37.5326</latitude>
+        <longitude>126.9652</longitude>
         <neighborhood>용산구</neighborhood>
-        <neighborhood>드래곤시티</neighborhood>
-        <margin_level>9</margin_level>
         <base_price>344400.00 KRW</base_price>
         <image>
             <url>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</url>
-            <tag>exterior</tag>
-            <tag>luxury</tag>
         </image>
         <url>https://www.livinginhotel.com/hotel/92</url>
         <status>active</status>
@@ -59,18 +53,15 @@
         <address format="simple">
             <component name="addr1">16 세운로</component>
             <component name="city">서울</component>
-            <component name="city_id">SEL</component>
             <component name="region">서울특별시</component>
             <component name="country">KR</component>
         </address>
+        <latitude>37.5665</latitude>
+        <longitude>126.9918</longitude>
         <neighborhood>중구</neighborhood>
-        <neighborhood>명동</neighborhood>
-        <margin_level>6</margin_level>
         <base_price>129600.00 KRW</base_price>
         <image>
             <url>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</url>
-            <tag>exterior</tag>
-            <tag>boutique</tag>
         </image>
         <url>https://www.livinginhotel.com/hotel/489</url>
         <status>active</status>
