@@ -1,67 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">
-    <id>https://www.livinginhotel.com/feed/products.xml</id>
-    <title>호텔에삶 Facebook 제품 피드</title>
-    <subtitle>호텔 숙박 서비스 제품 피드</subtitle>
-    <link href="https://www.livinginhotel.com" rel="alternate"/>
-    <link href="https://www.livinginhotel.com/feed/products.xml" rel="self"/>
-    <updated>2025-01-06T12:00:00+09:00</updated>
-    <author>
-        <name>호텔에삶 팀</name>
-        <email>info@livinginhotel.com</email>
-    </author>
-    <rights>© 2025 호텔에삶. All rights reserved.</rights>
-    <category term="Travel" label="여행"/>
-    <category term="Hotels" label="호텔"/>
-    
-    <entry>
-        <id>https://www.livinginhotel.com/hotel/17</id>
-        <title>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</title>
-        <summary>용산역에서 도보 3분 거리에 위치한 이비스 스타일 앰배서더 서울 용산은 비즈니스 및 레저 여행객 모두에게 완벽한 숙박 시설입니다. 현대적인 시설과 편안한 객실을 제공합니다.</summary>
-        <link href="https://www.livinginhotel.com/hotel/17" rel="alternate"/>
-        <g:id>17</g:id>
-        <g:title>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</g:title>
-        <g:description>용산역에서 도보 3분 거리에 위치한 이비스 스타일 앰배서더 서울 용산은 비즈니스 및 레저 여행객 모두에게 완벽한 숙박 시설입니다. 현대적인 시설과 편안한 객실을 제공합니다.</g:description>
-        <g:availability>in stock</g:availability>
-        <g:condition>new</g:condition>
-        <g:price>291900.00 KRW</g:price>
-        <g:link>https://www.livinginhotel.com/hotel/17</g:link>
-        <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</g:image_link>
-        <g:brand>이비스 스타일</g:brand>
-        <g:google_product_category>1475</g:google_product_category>
-    </entry>
-    
-    <entry>
-        <id>https://www.livinginhotel.com/hotel/92</id>
-        <title>서울드래곤시티 - 노보텔 앰배서더 서울 용산</title>
-        <summary>용산역에서 도보 3분 거리에 위치한 노보텔 앰배서더 서울 용산은 프리미엄 비즈니스 호텔로, 뛰어난 서비스와 편의시설을 제공합니다. 국제회의센터와 연결되어 있어 비즈니스 출장에 최적입니다.</summary>
-        <link href="https://www.livinginhotel.com/hotel/92" rel="alternate"/>
-        <g:id>92</g:id>
-        <g:title>서울드래곤시티 - 노보텔 앰배서더 서울 용산</g:title>
-        <g:description>용산역에서 도보 3분 거리에 위치한 노보텔 앰배서더 서울 용산은 프리미엄 비즈니스 호텔로, 뛰어난 서비스와 편의시설을 제공합니다. 국제회의센터와 연결되어 있어 비즈니스 출장에 최적입니다.</g:description>
-        <g:availability>in stock</g:availability>
-        <g:condition>new</g:condition>
-        <g:price>344400.00 KRW</g:price>
-        <g:link>https://www.livinginhotel.com/hotel/92</g:link>
-        <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</g:image_link>
-        <g:brand>노보텔</g:brand>
-        <g:google_product_category>1475</g:google_product_category>
-    </entry>
-    
-    <entry>
-        <id>https://www.livinginhotel.com/hotel/489</id>
-        <title>호텔 더 보타닉 세운 명동</title>
-        <summary>을지로 4가역과 명동 근처에 위치한 호텔 더 보타닉 세운 명동은 서울의 중심가에서 편리한 접근성을 제공합니다. 현대적인 디자인과 친환경적인 컨셉으로 꾸며진 부티크 호텔입니다.</summary>
-        <link href="https://www.livinginhotel.com/hotel/489" rel="alternate"/>
-        <g:id>489</g:id>
-        <g:title>호텔 더 보타닉 세운 명동</g:title>
-        <g:description>을지로 4가역과 명동 근처에 위치한 호텔 더 보타닉 세운 명동은 서울의 중심가에서 편리한 접근성을 제공합니다. 현대적인 디자인과 친환경적인 컨셉으로 꾸며진 부티크 호텔입니다.</g:description>
-        <g:availability>in stock</g:availability>
-        <g:condition>new</g:condition>
-        <g:price>129600.00 KRW</g:price>
-        <g:link>https://www.livinginhotel.com/hotel/489</g:link>
-        <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</g:image_link>
-        <g:brand>더 보타닉</g:brand>
-        <g:google_product_category>1475</g:google_product_category>
-    </entry>
-</feed> 
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+    <channel>
+        <title>호텔에삶 Facebook 제품 피드</title>
+        <link>https://www.livinginhotel.com</link>
+        <description>호텔 숙박 서비스 제품 피드</description>
+        <item>
+            <g:id>17</g:id>
+            <g:title>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</g:title>
+            <g:description>용산역에서 도보 3분 거리에 위치한 이비스 스타일 앰배서더 서울 용산은 비즈니스 및 레저 여행객 모두에게 완벽한 숙박 시설입니다. 현대적인 시설과 편안한 객실을 제공합니다.</g:description>
+            <g:availability>in stock</g:availability>
+            <g:condition>new</g:condition>
+            <g:price>291900.00 KRW</g:price>
+            <g:link>https://www.livinginhotel.com/hotel/17</g:link>
+            <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</g:image_link>
+            <g:brand>이비스 스타일</g:brand>
+            <g:google_product_category>1475</g:google_product_category>
+        </item>
+        <item>
+            <g:id>92</g:id>
+            <g:title>서울드래곤시티 - 노보텔 앰배서더 서울 용산</g:title>
+            <g:description>용산역에서 도보 3분 거리에 위치한 노보텔 앰배서더 서울 용산은 프리미엄 비즈니스 호텔로, 뛰어난 서비스와 편의시설을 제공합니다. 국제회의센터와 연결되어 있어 비즈니스 출장에 최적입니다.</g:description>
+            <g:availability>in stock</g:availability>
+            <g:condition>new</g:condition>
+            <g:price>344400.00 KRW</g:price>
+            <g:link>https://www.livinginhotel.com/hotel/92</g:link>
+            <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</g:image_link>
+            <g:brand>노보텔</g:brand>
+            <g:google_product_category>1475</g:google_product_category>
+        </item>
+        <item>
+            <g:id>489</g:id>
+            <g:title>호텔 더 보타닉 세운 명동</g:title>
+            <g:description>을지로 4가역과 명동 근처에 위치한 호텔 더 보타닉 세운 명동은 서울의 중심가에서 편리한 접근성을 제공합니다. 현대적인 디자인과 친환경적인 컨셉으로 꾸며진 부티크 호텔입니다.</g:description>
+            <g:availability>in stock</g:availability>
+            <g:condition>new</g:condition>
+            <g:price>129600.00 KRW</g:price>
+            <g:link>https://www.livinginhotel.com/hotel/489</g:link>
+            <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</g:image_link>
+            <g:brand>더 보타닉</g:brand>
+            <g:google_product_category>1475</g:google_product_category>
+        </item>
+    </channel>
+</rss> 
