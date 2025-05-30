@@ -4,7 +4,6 @@
         <title>호텔에삶 Facebook 제품 피드</title>
         <link>https://www.livinginhotel.com</link>
         <description>호텔 숙박 서비스 제품 피드</description>
-        
         <item>
             <g:id>17</g:id>
             <g:title>서울드래곤시티 - 이비스 스타일 앰배서더 서울 용산</g:title>
@@ -15,10 +14,8 @@
             <g:link>https://www.livinginhotel.com/hotel/17</g:link>
             <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/gCmzkC7XjVHxdvLBEq1JR3erXLVIj1H76afgZETI.png</g:image_link>
             <g:brand>이비스 스타일</g:brand>
-            <g:google_product_category>Travel > Hotel Rooms</g:google_product_category>
-            <g:status>active</g:status>
+            <g:google_product_category>1475</g:google_product_category>
         </item>
-        
         <item>
             <g:id>92</g:id>
             <g:title>서울드래곤시티 - 노보텔 앰배서더 서울 용산</g:title>
@@ -29,10 +26,8 @@
             <g:link>https://www.livinginhotel.com/hotel/92</g:link>
             <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/0/2022-08-12/jjB5D0PLvtx1TxgJMcEfsVSlFBFLPKiUw20mQGTU.jpg</g:image_link>
             <g:brand>노보텔</g:brand>
-            <g:google_product_category>Travel > Hotel Rooms</g:google_product_category>
-            <g:status>active</g:status>
+            <g:google_product_category>1475</g:google_product_category>
         </item>
-        
         <item>
             <g:id>489</g:id>
             <g:title>호텔 더 보타닉 세운 명동</g:title>
@@ -43,8 +38,7 @@
             <g:link>https://www.livinginhotel.com/hotel/489</g:link>
             <g:image_link>https://d2pyzcqibfhr70.cloudfront.net/images/hotel-images/734/2025-04-04/Fh32ii7RMEGcHQfi6dCYQHPB3atS5j4EORK8Ppyq.webp</g:image_link>
             <g:brand>더 보타닉</g:brand>
-            <g:google_product_category>Travel > Hotel Rooms</g:google_product_category>
-            <g:status>active</g:status>
+            <g:google_product_category>1475</g:google_product_category>
         </item>
     </channel>
 </rss> 
